@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
