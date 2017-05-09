@@ -28,6 +28,7 @@ set hlsearch
 
 let mapleader = ","
 nnoremap <leader><space> :nohlsearch<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 syntax enable 
 set number
