@@ -30,5 +30,6 @@ let mapleader = ","
 nnoremap <leader><space> :nohlsearch<CR>
 map <C-n> :NERDTreeToggle<CR>
 
+set backspace=indent,eol,start
 syntax enable 
 set number
