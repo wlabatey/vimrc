@@ -8,7 +8,8 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'altercation/vim-colors-solarized'
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'markcornick/vim-vagrant'
+Plug 'saltstack/salt-vim'
 
 set laststatus=2
 call plug#end()
@@ -16,9 +17,9 @@ filetype plugin indent on
 
 " See link for info -> https://dougblack.io/words/a-good-vimrc.html
 
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set showcmd
 set cursorline
@@ -37,9 +38,4 @@ set backspace=indent,eol,start
 set background=dark
 colorscheme solarized
 syntax enable 
-set number
-
-set ts=2 sw=2 et
-let g:indent_guides_start_level=3
-let g:indent_guides_guide_size=1
-let g:indent_guides_enable_on_vim_startup=1
+set number relativenumber
