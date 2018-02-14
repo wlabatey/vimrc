@@ -28,6 +28,10 @@ set lazyredraw
 set showmatch
 set incsearch
 set hlsearch
+set number
+set clipboard+=unnamed
+set nobackup
+set noswapfile
 
 let mapleader = ","
 nnoremap <leader><space> :nohlsearch<CR>
@@ -37,5 +41,4 @@ let g:solarized_termcolors=256
 set backspace=indent,eol,start
 set background=dark
 colorscheme solarized
-syntax enable 
-set number relativenumber
+syntax enable
