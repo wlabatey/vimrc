@@ -4,6 +4,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'valloric/youcompleteme'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
@@ -42,3 +43,8 @@ set backspace=indent,eol,start
 set background=dark
 colorscheme solarized
 syntax enable
+
+" YouCompleteMe Options
+let g:ycm_python_binary_path = '/usr/bin/python3'
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
