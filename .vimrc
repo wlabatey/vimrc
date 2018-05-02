@@ -41,7 +41,6 @@ let mapleader = ","
 nnoremap <leader><space> :nohlsearch<CR>
 map <C-n> :NERDTreeToggle<CR>
 
-let g:solarized_termcolors=256
 set backspace=indent,eol,start
 set background=dark
 colorscheme solarized
