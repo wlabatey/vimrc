@@ -1,26 +1,8 @@
-call plug#begin()
-
-Plug 'kien/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'valloric/youcompleteme'
-Plug 'scrooloose/syntastic'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'pangloss/vim-javascript'
-Plug 'altercation/vim-colors-solarized'
-Plug 'markcornick/vim-vagrant'
-Plug 'saltstack/salt-vim'
-
+" Vanilla vimrc, no plugins
 set laststatus=2
-call plug#end()
-filetype plugin indent on
-
-" See link for info -> https://dougblack.io/words/a-good-vimrc.html
+filetype indent on
 
 set encoding=utf-8
-"set textwidth=79 - syntastic will automatically let me know about long lines, disabling this for now.
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -41,38 +23,9 @@ set noswapfile
 
 let mapleader = ","
 nnoremap <leader><space> :nohlsearch<CR>
-map <C-n> :NERDTreeToggle<CR>
 
-let g:solarized_termcolors=256
 set backspace=indent,eol,start
 set background=dark
-colorscheme solarized
-syntax enable
+syntax on
 
-" YouCompleteMe Options
-let g:ycm_python_binary_path = '/usr/bin/python3'
 set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
-
-" Syntastic Options
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_enable_balloons = 1
-let g:syntastic_mode_map = { 
-    \ "mode": "passive",
-    \ "active_filetypes": [""],
-    \ "passive_filetypes": [""] }
-
-nmap <leader>s :SyntasticCheck<CR>
-nmap <leader>r :SyntasticReset<CR>
-nmap <leader>n :lnext<CR>
-nmap <leader>N :lprevious<CR>
-nmap <leader>t :SyntasticToggleMode<CR>
