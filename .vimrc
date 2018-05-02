@@ -19,7 +19,8 @@ filetype plugin indent on
 
 " See link for info -> https://dougblack.io/words/a-good-vimrc.html
 
-set textwidth=79
+set encoding=utf-8
+"set textwidth=79 - syntastic will automatically let me know about long lines, disabling this for now.
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -63,10 +64,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_enable_balloons = 1
 let g:syntastic_mode_map = { 
     \ "mode": "passive",
-    \ "active_filetypes": ["python"],
+    \ "active_filetypes": [""],
     \ "passive_filetypes": [""] }
 
 nmap <leader>s :SyntasticCheck<CR>
