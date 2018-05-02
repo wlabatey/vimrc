@@ -23,10 +23,7 @@ set laststatus=2
 call plug#end()
 filetype plugin indent on
 
-" See link for info -> https://dougblack.io/words/a-good-vimrc.html
-
 set encoding=utf-8
-"set textwidth=79 - syntastic will automatically let me know about long lines, disabling this for now.
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
