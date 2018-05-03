@@ -73,8 +73,14 @@ let g:syntastic_mode_map = {
     \ "active_filetypes": [""],
     \ "passive_filetypes": [""] }
 
-nmap <leader>s :SyntasticCheck<CR>
-nmap <leader>r :SyntasticReset<CR>
-nmap <leader>n :lnext<CR>
-nmap <leader>N :lprevious<CR>
-nmap <leader>t :SyntasticToggleMode<CR>
+nnoremap <leader>c :SyntasticCheck<CR>
+nnoremap <leader>r :SyntasticReset<CR>
+nnoremap <leader>n :lnext<CR>
+nnoremap <leader>N :lprevious<CR>
+nnoremap <leader>t :SyntasticToggleMode<CR>
+nnoremap <leader>v :vnew<CR>
+nnoremap <leader>s :new<CR>
+nnoremap <leader>qq :q<CR>
+
+
+
