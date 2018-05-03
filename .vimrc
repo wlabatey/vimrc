@@ -36,12 +36,16 @@ set number
 set clipboard+=unnamed
 set nobackup
 set noswapfile
-
-let mapleader = ","
-nnoremap <leader><space> :nohlsearch<CR>
-map <C-n> :NERDTreeToggle<CR>
-
 set backspace=indent,eol,start
 set background=dark
+
 colorscheme solarized
 syntax enable
+
+let mapleader = ","
+
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>v :vnew<CR>
+nnoremap <leader>s :new<CR>
+nnoremap <leader>qq :q<CR>
