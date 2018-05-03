@@ -41,13 +41,9 @@ set number
 set clipboard+=unnamed
 set nobackup
 set noswapfile
-
-let mapleader = ","
-nnoremap <leader><space> :nohlsearch<CR>
-map <C-n> :NERDTreeToggle<CR>
-
 set backspace=indent,eol,start
 set background=dark
+
 colorscheme solarized
 syntax enable
 
@@ -73,6 +69,10 @@ let g:syntastic_mode_map = {
     \ "active_filetypes": [""],
     \ "passive_filetypes": [""] }
 
+let mapleader = ","
+
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>c :SyntasticCheck<CR>
 nnoremap <leader>r :SyntasticReset<CR>
 nnoremap <leader>n :lnext<CR>
@@ -80,7 +80,5 @@ nnoremap <leader>N :lprevious<CR>
 nnoremap <leader>t :SyntasticToggleMode<CR>
 nnoremap <leader>v :vnew<CR>
 nnoremap <leader>s :new<CR>
+nnoremap <leader>qw :w<CR>:q<CR>
 nnoremap <leader>qq :q<CR>
-
-
-
