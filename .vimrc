@@ -52,4 +52,4 @@ nnoremap <leader>v :vnew<CR>
 nnoremap <leader>s :new<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>qw :w<CR>:q<CR>
-nnoremap <leader>qq :q!<CR>
+nnoremap <leader>qq :q<CR>
