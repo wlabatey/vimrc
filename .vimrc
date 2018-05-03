@@ -43,5 +43,5 @@ map <C-n> :NERDTreeToggle<CR>
 
 set backspace=indent,eol,start
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 syntax enable
