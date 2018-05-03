@@ -9,6 +9,7 @@ call plug#begin()
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
@@ -44,8 +45,11 @@ syntax enable
 
 let mapleader = ","
 
+noremap <leader><space> :nohlsearch<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <leader>v :vnew<CR>
 nnoremap <leader>s :new<CR>
-nnoremap <leader>qq :q<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>qw :w<CR>:q<CR>
+nnoremap <leader>qq :q!<CR>
