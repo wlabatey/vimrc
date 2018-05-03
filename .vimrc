@@ -43,6 +43,8 @@ set nobackup
 set noswapfile
 set backspace=indent,eol,start
 set background=dark
+set list
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬
 
 colorscheme solarized
 syntax enable
