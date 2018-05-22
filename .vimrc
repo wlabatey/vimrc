@@ -9,6 +9,7 @@ call plug#begin()
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -55,3 +56,11 @@ nnoremap <leader>s :new<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>qw :w<CR>:q<CR>
 nnoremap <leader>qq :q<CR>
+nnoremap <leader>ws :%s/\s\+$//e<CR>
+
+"This autocommand jumps to the last known position in a file
+"just after opening it, if the '" mark is set:
+au BufReadPost *
+\ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+\ |   exe "normal! g`\""
+\ | endif
