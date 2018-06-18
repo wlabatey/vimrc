@@ -46,7 +46,7 @@ set backspace=indent,eol,start
 set background=dark
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬
-
+set modeline
 colorscheme solarized
 syntax enable
 
@@ -67,7 +67,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_enable_balloons = 1
-let g:syntastic_mode_map = { 
+let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": [""],
     \ "passive_filetypes": [""] }
@@ -86,6 +86,14 @@ nnoremap <leader>s :new<CR>
 nnoremap <leader>qw :w<CR>:q<CR>
 nnoremap <leader>qq :q<CR>
 nnoremap <leader>ws :%s/\s\+$//e<CR>
+nnoremap tt :tabnew<CR>
+nnoremap tn :tabnext<CR>
+nnoremap tN :tabprev<CR>
+nnoremap tq :tabclose<CR>
+nnoremap M `
+
+nnoremap <leader>d :setlocal spell spelllang=en_gb <bar> :hi SpellBad cterm=underline,bold<CR>
+nnoremap <leader>D :set nospell <bar> :hi clear SpellBad<CR>
 
 "This autocommand jumps to the last known position in a file
 "just after opening it, if the '" mark is set:
@@ -93,3 +101,14 @@ au BufReadPost *
 \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
 \ |   exe "normal! g`\""
 \ | endif
+
+" Automatically resize splits on window resize
+autocmd VimResized * wincmd =
+
+" ctrl+p speedups - https://stackoverflow.com/a/22784889
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+
