@@ -48,15 +48,26 @@ syntax enable
 
 let mapleader = ","
 
-noremap <leader><space> :nohlsearch<CR>
-nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>c :SyntasticCheck<CR>
+nnoremap <leader>r :SyntasticReset<CR>
+nnoremap <leader>n :lnext<CR>
+nnoremap <leader>N :lprevious<CR>
+nnoremap <leader>t :SyntasticToggleMode<CR>
 nnoremap <leader>v :vnew<CR>
 nnoremap <leader>s :new<CR>
-nnoremap <leader>w :w<CR>
 nnoremap <leader>qw :w<CR>:q<CR>
 nnoremap <leader>qq :q<CR>
 nnoremap <leader>ws :%s/\s\+$//e<CR>
+nnoremap tt :tabnew<CR>
+nnoremap tn :tabnext<CR>
+nnoremap tN :tabprev<CR>
+nnoremap tq :tabclose<CR>
+nnoremap M `
+
+nnoremap <leader>d :setlocal spell spelllang=en_gb <bar> :hi SpellBad cterm=underline,bold<CR>
+nnoremap <leader>D :set nospell <bar> :hi clear SpellBad<CR>
 
 "This autocommand jumps to the last known position in a file
 "just after opening it, if the '" mark is set:
@@ -64,3 +75,6 @@ au BufReadPost *
 \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
 \ |   exe "normal! g`\""
 \ | endif
+
+" Automatically resize splits on window resize
+autocmd VimResized * wincmd =
