@@ -107,6 +107,6 @@ autocmd VimResized * wincmd =
 
 " ctrl+p speedups - https://stackoverflow.com/a/22784889
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-if executable('ag')
+if executable('rg')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
