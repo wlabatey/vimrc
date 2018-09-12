@@ -1,5 +1,6 @@
 filetype indent on
 
+set modeline
 set laststatus=2
 set encoding=utf-8
 set tabstop=4
@@ -30,12 +31,8 @@ colorscheme default
 let mapleader = ","
 
 nnoremap <leader><space> :nohlsearch<CR>
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <leader>c :SyntasticCheck<CR>
-nnoremap <leader>r :SyntasticReset<CR>
 nnoremap <leader>n :lnext<CR>
 nnoremap <leader>N :lprevious<CR>
-nnoremap <leader>t :SyntasticToggleMode<CR>
 nnoremap <leader>v :vnew<CR>
 nnoremap <leader>s :new<CR>
 nnoremap <leader>qw :w<CR>:q<CR>
