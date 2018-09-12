@@ -11,6 +11,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
+Plug 'sjl/gundo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
@@ -19,6 +20,7 @@ call plug#end()
 
 filetype plugin indent on
 
+set modeline
 set laststatus=2
 set encoding=utf-8
 set tabstop=4
@@ -78,3 +80,5 @@ au BufReadPost *
 
 " Automatically resize splits on window resize
 autocmd VimResized * wincmd =
+
+let g:gundo_playback_delay = 350
