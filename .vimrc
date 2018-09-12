@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
+Plug 'sjl/gundo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
@@ -91,6 +92,7 @@ nnoremap tn :tabnext<CR>
 nnoremap tN :tabprev<CR>
 nnoremap tq :tabclose<CR>
 nnoremap M `
+nnoremap <leader>u :GundoToggle<CR>
 
 nnoremap <leader>d :setlocal spell spelllang=en_gb <bar> :hi SpellBad cterm=underline,bold<CR>
 nnoremap <leader>D :set nospell <bar> :hi clear SpellBad<CR>
@@ -112,3 +114,6 @@ if executable('rg')
   let g:ctrlp_working_path_mode = 'ra'
   let g:ctrlp_switch_buffer= 'et'
 endif
+
+" gundo settings
+let g:gundo_playback_delay = 350
