@@ -48,6 +48,8 @@ set background=dark
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬
 set modeline
+set undofile
+set undodir=~/.vim/undo
 colorscheme solarized
 syntax enable
 
