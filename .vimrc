@@ -82,3 +82,7 @@ au BufReadPost *
 autocmd VimResized * wincmd =
 
 let g:gundo_playback_delay = 350
+
+" Automatically set width on yml files.
+autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
