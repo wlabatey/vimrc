@@ -20,6 +20,8 @@ Plug 'tpope/vim-surround'
 Plug 'pangloss/vim-javascript'
 Plug 'markcornick/vim-vagrant'
 Plug 'saltstack/salt-vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 set laststatus=2
 call plug#end()
@@ -120,6 +122,6 @@ endif
 " gundo settings
 let g:gundo_playback_delay = 350
 
-" Automatically set width on yml files.
+" Automatically set width on yml and ruby files.
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
