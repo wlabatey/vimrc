@@ -49,6 +49,7 @@ set backspace=indent,eol,start
 set background=dark
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬
+set showbreak=↪\
 set modeline
 set undofile
 set undodir=~/.vim/undo
@@ -69,6 +70,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:go_list_type = 'quickfix'
+let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter', 'gofmt']
+let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_enable_balloons = 1
@@ -97,6 +101,7 @@ nnoremap tN :tabprev<CR>
 nnoremap tq :tabclose<CR>
 nnoremap M `
 nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>gr :w<CR>:GoRun<CR>
 
 nnoremap <leader>d :setlocal spell spelllang=en_gb <bar> :hi SpellBad cterm=underline,bold<CR>
 nnoremap <leader>D :set nospell <bar> :hi clear SpellBad<CR>
