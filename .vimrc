@@ -102,6 +102,7 @@ nnoremap tq :tabclose<CR>
 nnoremap M `
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>gr :w<CR>:GoRun<CR>
+nnoremap O O<ESC>
 
 nnoremap <leader>d :setlocal spell spelllang=en_gb <bar> :hi SpellBad cterm=underline,bold<CR>
 nnoremap <leader>D :set nospell <bar> :hi clear SpellBad<CR>
