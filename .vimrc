@@ -82,6 +82,7 @@ let g:syntastic_mode_map = {
     \ "passive_filetypes": [""] }
 
 let mapleader = ","
+let g:ctrlp_dont_split = 'NERD'
 
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -103,9 +104,11 @@ nnoremap M `
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>gr :w<CR>:GoRun<CR>
 nnoremap O O<ESC>
-
 nnoremap <leader>d :setlocal spell spelllang=en_gb <bar> :hi SpellBad cterm=underline,bold<CR>
 nnoremap <leader>D :set nospell <bar> :hi clear SpellBad<CR>
+nnoremap > :vertical resize +10<CR>
+nnoremap < :vertical resize -10<CR>
+
 
 "This autocommand jumps to the last known position in a file
 "just after opening it, if the '" mark is set:
