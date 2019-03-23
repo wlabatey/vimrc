@@ -56,6 +56,8 @@ set undodir=~/.vim/undo
 colorscheme solarized
 syntax enable
 
+let NERDTreeShowHidden=1
+
 " YouCompleteMe Options
 let g:ycm_python_binary_path = '/usr/bin/python3'
 set completeopt-=preview
@@ -134,3 +136,4 @@ let g:gundo_playback_delay = 350
 " Automatically set width on yml and ruby files.
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype text set tw=72
