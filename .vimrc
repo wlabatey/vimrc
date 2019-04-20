@@ -74,6 +74,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:go_list_type = 'quickfix'
 let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter', 'gofmt']
+let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_ruby_checkers = ['rubocop']
@@ -124,7 +125,7 @@ autocmd VimResized * wincmd =
 
 " ctrl+p speedups - https://stackoverflow.com/a/22784889
 if executable('rg')
-  let g:ctrlp_user_command = 'rg --files %s'
+  let g:ctrlp_user_command = 'rg --hidden --files %s'
   let g:ctrlp_use_caching = 0
   let g:ctrlp_working_path_mode = 'ra'
   let g:ctrlp_switch_buffer= 'et'
@@ -136,4 +137,3 @@ let g:gundo_playback_delay = 350
 " Automatically set width on yml and ruby files.
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
-autocmd Filetype text set tw=72
