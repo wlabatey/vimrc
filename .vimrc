@@ -111,6 +111,7 @@ nnoremap <leader>d :setlocal spell spelllang=en_gb <bar> :hi SpellBad cterm=unde
 nnoremap <leader>D :set nospell <bar> :hi clear SpellBad<CR>
 nnoremap > :vertical resize +10<CR>
 nnoremap < :vertical resize -10<CR>
+nnoremap <leader>b :b#<CR>
 
 
 "This autocommand jumps to the last known position in a file
@@ -137,3 +138,6 @@ let g:gundo_playback_delay = 350
 " Automatically set width on yml and ruby files.
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
+
+" Define command to generate ctags for current directory
+command! MakeTags !ctags -R .
