@@ -27,6 +27,7 @@ set laststatus=2
 call plug#end()
 filetype plugin indent on
 
+set nocompatible
 set encoding=utf-8
 set tabstop=4
 set softtabstop=4
@@ -50,7 +51,7 @@ set background=dark
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬
 set showbreak=↪\
-set modeline
+set modelines=0
 set undofile
 set undodir=~/.vim/undo
 colorscheme solarized
