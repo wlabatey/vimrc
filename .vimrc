@@ -1,6 +1,4 @@
 filetype indent on
-
-set modeline
 set laststatus=2
 set encoding=utf-8
 set tabstop=4
@@ -24,6 +22,10 @@ set backspace=indent,eol,start
 set background=dark
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·,eol:¬
+set showbreak=↪\
+set modelines=0
+set undofile
+set undodir=~/.vim/undo
 
 syntax on
 colorscheme default
@@ -43,9 +45,12 @@ nnoremap tn :tabnext<CR>
 nnoremap tN :tabprev<CR>
 nnoremap tq :tabclose<CR>
 nnoremap M `
-
+nnoremap O O<ESC>
 nnoremap <leader>d :setlocal spell spelllang=en_gb <bar> :hi SpellBad cterm=underline,bold<CR>
 nnoremap <leader>D :set nospell <bar> :hi clear SpellBad<CR>
+nnoremap > :vertical resize +10<CR>
+nnoremap < :vertical resize -10<CR>
+nnoremap <leader>b :b#<CR>
 
 "This autocommand jumps to the last known position in a file
 "just after opening it, if the '" mark is set:
