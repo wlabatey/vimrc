@@ -11,7 +11,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'valloric/youcompleteme'
-Plug 'sjl/gundo.vim'
+Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
@@ -88,6 +88,8 @@ let g:syntastic_mode_map = {
 let mapleader = ","
 let g:ctrlp_dont_split = 'NERD'
 
+let g:undotree_SetFocusWhenToggle = 1
+
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>c :SyntasticCheck<CR>
@@ -105,7 +107,7 @@ nnoremap tn :tabnext<CR>
 nnoremap tN :tabprev<CR>
 nnoremap tq :tabclose<CR>
 nnoremap M `
-nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>gr :w<CR>:GoRun<CR>
 nnoremap O O<ESC>
 nnoremap <leader>d :setlocal spell spelllang=en_gb <bar> :hi SpellBad cterm=underline,bold<CR>
@@ -132,9 +134,6 @@ if executable('rg')
   let g:ctrlp_working_path_mode = 'ra'
   let g:ctrlp_switch_buffer= 'et'
 endif
-
-" gundo settings
-let g:gundo_playback_delay = 350
 
 " Automatically set width on yml and ruby files.
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
